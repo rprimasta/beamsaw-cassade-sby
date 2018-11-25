@@ -2,3 +2,4 @@
 # The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
 
 sets spindle-at-speed true
+#net spindle-state gladevcp.hal_light_button1-value <= motion.spindle-on

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>522</height>
+    <height>554</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -213,8 +213,8 @@ font-size:15pt</string>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>20</y>
+       <x>10</x>
+       <y>30</y>
        <width>291</width>
        <height>21</height>
       </rect>
@@ -552,9 +552,9 @@ font-size:15pt</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>20</y>
+       <y>30</y>
        <width>321</width>
-       <height>199</height>
+       <height>256</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
@@ -1539,7 +1539,7 @@ font-size:15pt</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

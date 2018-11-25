@@ -120,6 +120,8 @@ net ALIGN-UP plc01.M112 <= motion.digital-out-09
 net ALIGN-PUSH plc01.M113 <= motion.digital-out-10
 net DOOR-LOCK plc01.M114 <= motion.digital-out-11
 net GRIPPER plc01.M115 <= motion.digital-out-12
+net SAW_JOG_POS plc01.M116 <= motion.digital-out-13
+net SAW_JOG_NEG plc01.M117 <= motion.digital-out-14
 
 net PLC-BUSY plc01.M513 => motion.digital-in-00
 

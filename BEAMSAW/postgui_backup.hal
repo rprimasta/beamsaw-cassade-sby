@@ -2,3 +2,4 @@
 # The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
 
 sets spindle-at-speed true
+setp gladevcp.hal_table1 1

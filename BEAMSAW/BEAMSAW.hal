@@ -54,6 +54,7 @@ net home-x          <= parport.0.pin-10-in
 #net max-x           <= parport.0.pin-12-in-not
 net min-x           <= parport.0.pin-11-in
 net max-x           <= parport.0.pin-12-in
+net amp-axis-fault  <= parport.0.pin-13-in
 
 
 setp stepgen.0.position-scale [AXIS_0]SCALE
@@ -70,6 +71,7 @@ net xenable axis.0.amp-enable-out => stepgen.0.enable
 net home-x => axis.0.home-sw-in
 net min-x => axis.0.neg-lim-sw-in
 net max-x => axis.0.pos-lim-sw-in
+net amp-axis-fault => axis.0.amp-fault-in
 
 net estop-out <= iocontrol.0.user-enable-out
 #net estop-ext => iocontrol.0.emc-enable-in
@@ -105,6 +107,7 @@ net S-ON plc01.M101 <= motion.spindle-forward
 
 net SAW-RUN01 plc01.M103 <= motion.digital-out-00
 net SAW-RUN02 plc01.M104 <= motion.digital-out-01
+net SAW-RUN-RET plc01.M102 <= motion.digital-out-15
 
 net SAW-UP plc01.M105 <= motion.digital-out-02
 net SAW-DOWN plc01.M106 <= motion.digital-out-03
@@ -132,7 +135,3 @@ net estop-ext0 and2.0.in0 <= parport.0.pin-15-in
 net estop-ext1 and2.0.in1 <= plc01.x4
 
 net estop-ext and2.0.out => iocontrol.0.emc-enable-in
-
-
-
-

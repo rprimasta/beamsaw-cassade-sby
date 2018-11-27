@@ -5,30 +5,230 @@
   <!-- interface-naming-policy project-wide -->
   <object class="GtkWindow" id="window1">
     <property name="can_focus">False</property>
+    <property name="resizable">False</property>
     <child>
       <object class="GtkFrame" id="frame1">
+        <property name="width_request">300</property>
+        <property name="height_request">600</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="label_xalign">0</property>
         <property name="shadow_type">none</property>
         <child>
-          <object class="GtkAlignment" id="alignment1">
+          <object class="GtkVBox" id="vbox1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="left_padding">12</property>
             <child>
-              <object class="GtkVBox" id="vbox1">
+              <object class="GtkLabel" id="label7">
+                <property name="height_request">47</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="label" translatable="yes">MACHINE STATUS</property>
+                <property name="use_underline">True</property>
+                <property name="justify">center</property>
+                <attributes>
+                  <attribute name="scale" value="3"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="Combi_DRO" id="combi_dro1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="abs_color">#00000000ffff</property>
+                <property name="dtg_color">#ffffffff0000</property>
+                <property name="homed_color">#0000ffff0000</property>
+                <property name="rel_color">#000000000000</property>
+                <property name="unhomed_color">#ffff00000000</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTable" id="table1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="n_rows">5</property>
+                <property name="n_columns">2</property>
+                <property name="row_spacing">15</property>
                 <child>
-                  <object class="Combi_DRO" id="combi_dro1">
+                  <object class="HAL_LED" id="hal_led1">
+                    <property name="height_request">20</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="abs_color">#00000000ffff</property>
-                    <property name="dtg_color">#ffffffff0000</property>
-                    <property name="homed_color">#0000ffff0000</property>
-                    <property name="rel_color">#000000000000</property>
-                    <property name="unhomed_color">#ffff00000000</property>
+                    <property name="led_blink_rate">0</property>
+                    <property name="led_shape">2</property>
+                    <property name="pick_color_off">#ffff00000000</property>
+                    <property name="pick_color_on">#0000c5c55959</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label2">
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">PLC Ready</property>
+                    <attributes>
+                      <attribute name="scale" value="2"/>
+                    </attributes>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label3">
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Saw</property>
+                    <attributes>
+                      <attribute name="scale" value="2"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="HAL_LED" id="hal_led2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="led_blink_rate">0</property>
+                    <property name="led_shape">2</property>
+                    <property name="pick_color_off">#ffff00000000</property>
+                    <property name="pick_color_on">#0000c5c55959</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label4">
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">CNC Status</property>
+                    <attributes>
+                      <attribute name="scale" value="2"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label5">
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Servo Ready</property>
+                    <attributes>
+                      <attribute name="scale" value="2"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="top_attach">3</property>
+                    <property name="bottom_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="HAL_LED" id="hal_led3">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="led_blink_rate">0</property>
+                    <property name="led_shape">2</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">3</property>
+                    <property name="bottom_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label6">
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Not Ready</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">False</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed1">
+                <property name="height_request">200</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">False</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <object class="GtkHBox" id="hbox2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="homogeneous">True</property>
+                <child>
+                  <object class="GtkButton" id="button2">
+                    <property name="label" translatable="yes">SAW JOG -</property>
+                    <property name="height_request">32</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="use_action_appearance">False</property>
+                    <signal name="pressed" handler="saw_jog_neg_press" swapped="no"/>
+                    <signal name="released" handler="saw_jog_neg_release" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">True</property>
@@ -37,78 +237,54 @@
                   </packing>
                 </child>
                 <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <object class="GtkHBox" id="hbox2">
+                  <object class="GtkButton" id="button1">
+                    <property name="label" translatable="yes">SAW JOG +</property>
+                    <property name="height_request">32</property>
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <child>
-                      <object class="GtkButton" id="button2">
-                        <property name="label" translatable="yes">SAW JOG -</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <property name="use_action_appearance">False</property>
-                        <signal name="pressed" handler="saw_jog_neg_press" swapped="no"/>
-                        <signal name="released" handler="saw_jog_neg_release" swapped="no"/>
-                      </object>
-                      <packing>
-                        <property name="expand">True</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="button1">
-                        <property name="label" translatable="yes">SAW JOG +</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <property name="use_action_appearance">False</property>
-                        <signal name="pressed" handler="saw_jog_pos_press" swapped="no"/>
-                        <signal name="released" handler="saw_jog_pos_release" swapped="no"/>
-                      </object>
-                      <packing>
-                        <property name="expand">True</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="use_action_appearance">False</property>
+                    <signal name="pressed" handler="saw_jog_pos_press" swapped="no"/>
+                    <signal name="released" handler="saw_jog_pos_release" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">True</property>
                     <property name="fill">True</property>
-                    <property name="position">2</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkAlignment" id="alignment2">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="top_padding">10</property>
-                    <property name="bottom_padding">10</property>
-                    <child>
-                      <object class="HAL_LightButton" id="hal_light_button5">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="button_text" translatable="yes">RESET</property>
-                        <property name="font_off_color">#000000000000</property>
-                        <property name="font_on_color">#000000000000</property>
-                        <property name="font_size">15</property>
-                        <property name="light_off_color">#bebebebebebe</property>
-                        <property name="light_on_color">#0000ffff0000</property>
-                        <signal name="clicked" handler="on_reset_press" swapped="no"/>
-                      </object>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">True</property>
-                    <property name="fill">True</property>
-                    <property name="position">3</property>
+                    <property name="position">1</property>
                   </packing>
                 </child>
               </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">False</property>
+                <property name="position">9</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="top_padding">10</property>
+                <property name="bottom_padding">10</property>
+                <child>
+                  <object class="HAL_LightButton" id="hal_light_button5">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="button_text" translatable="yes">RESET</property>
+                    <property name="font_off_color">#000000000000</property>
+                    <property name="font_on_color">#000000000000</property>
+                    <property name="font_size">15</property>
+                    <property name="light_off_color">#bebebebebebe</property>
+                    <property name="light_on_color">#0000ffff0000</property>
+                    <signal name="clicked" handler="on_reset_press" swapped="no"/>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">10</property>
+              </packing>
             </child>
           </object>
         </child>
@@ -116,7 +292,7 @@
           <object class="GtkLabel" id="label1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">&lt;b&gt;frame1&lt;/b&gt;</property>
+            <property name="label" translatable="yes">&lt;b&gt;Panel&lt;/b&gt;</property>
             <property name="use_markup">True</property>
           </object>
         </child>

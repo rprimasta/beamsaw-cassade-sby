@@ -1,5 +1,11 @@
 # Include your customized HAL commands here
 # The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
 
+#loadusr gladevcp
+#loadusr halui
+
 sets spindle-at-speed true
-#net spindle-state gladevcp.hal_light_button1-value <= motion.spindle-on
+net plc-ready gladevcp.hal_led1 <= plc01.M512
+net servo_ready gladevcp.hal_led3 <= plc01.y0
+net saw-on gladevcp.hal_led2 <= plc01.y1
+#sets gladevcp.hal_led1 true
